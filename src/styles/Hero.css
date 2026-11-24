@@ -1,0 +1,142 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+  background: url("/Images/hero-image-concert.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* centers h1, p and buttons */
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  transform: translateY(80px);
+}
+
+.hero-eyebrow {
+  color: var(--nav-white);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  max-width: 1000px;
+  font-size: clamp(2.2rem, 4.6vw, 4rem);
+  font-weight: 900;
+  margin: 0 auto 24px; 
+  color: var(--nav-white);
+  /* margin-top: 200px; */
+  text-transform: uppercase;
+  font-style: italic;
+  font-family: 'Roboto Condensed', sans-serif;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+
+.hero-content h1 span {
+  color: var(--nav-white);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.hero-description {
+  max-width: 620px;
+  font-size: 1.10rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto 32px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-btn-primary,
+.hero-btn-secondary {
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-btn-primary {
+  background-color: var(--color-accent);
+  color: white;
+  border: 2px solid var(--color-accent);
+}
+
+.hero-btn-primary:hover {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.hero-btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.hero-btn-secondary:hover {
+  background-color: white;
+  color: var(--color-primary);
+}
+
+/* Tablet and mobile */
+@media (max-width: 768px) {
+  .hero,
+  .hero-overlay {
+    min-height: 90vh;
+  }
+
+  .hero-content {
+    padding-top: 130px;
+    padding-bottom: 60px;
+    transform: none;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.3rem, 9vw, 3.5rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

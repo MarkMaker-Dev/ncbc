@@ -1,0 +1,148 @@
+
+.vision-section {
+  padding: 100px 0;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.vision-heading {
+  max-width: 900px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.vision-eyebrow {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.vision-heading h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.vision-heading h2 span {
+  color: var(--color-accent);
+}
+
+.vision-intro {
+  max-width: 680px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Vision image cards */
+
+.vision-pillars {
+  margin-top: 20px;
+}
+
+.vision-card {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-dark);
+  isolation: isolate;
+}
+
+.vision-card-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  transition: transform 0.5s ease;
+}
+
+.vision-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.55) 45%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  z-index: -1;
+}
+
+.vision-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  color: #ffffff;
+}
+
+.vision-number {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.vision-card h3 {
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.vision-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.vision-card:hover .vision-card-image {
+  transform: scale(1.08);
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .vision-section {
+    padding: 80px 0;
+  }
+
+  .vision-heading {
+    margin-bottom: 45px;
+  }
+
+  .vision-card {
+    height: 330px;
+  }
+
+  .vision-card-content {
+    padding: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .vision-section {
+    padding: 65px 0;
+  }
+
+  .vision-heading h2 {
+    font-size: 2rem;
+  }
+
+  .vision-card {
+    height: 320px;
+  }
+}
